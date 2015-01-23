@@ -31,7 +31,7 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/indy2.png) no-repeat center center;
+    background: url(../img/indy.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -163,4 +163,9 @@ footer {
 
 p.copyright {
     margin: 15px 0 0;
+}
+
+.navbar-default {
+  background-color: rgba(248, 248, 248, 0.9);
+  border-color: #e7e7e7;
 }
