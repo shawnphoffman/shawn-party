@@ -1,9 +1,0 @@
----
-layout: default
-img: pump.gif
-category: Services
-title: Pardon my dust
-description: |
-  <p class="lead">This site is currently under construction</p>
-
----
