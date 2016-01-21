@@ -186,6 +186,13 @@ section .image.halfsie {
     margin-left: auto;
     margin-right: auto;
 }
+@media(max-width:767px) {
+    section .image.halfsie {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 @media(min-width:768px) {
     section .image {
@@ -206,8 +213,10 @@ section .image.halfsie {
 
 .image span {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    position: absolute;
-    bottom: -1.5em;
+    /*position: absolute;*/
+    /*bottom: -1.5em;*/
+    position: relative;
+    bottom: 0;
     left: 0;
     z-index: -1;
     display: block;
@@ -227,7 +236,7 @@ section .image.halfsie {
         bottom: 0;
     }
     .image:hover span {
-        bottom: -1.5em;
+        bottom: -0.5em;
         opacity: 1;
     }
 }
