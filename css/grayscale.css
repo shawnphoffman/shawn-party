@@ -160,8 +160,8 @@ a:focus {
     -o-background-size: cover;
 }
 
-.intro.beach { background: url(../img/_beach_bg.jpg) no-repeat bottom center scroll; }
-.intro.trees { background: url(../img/_trees_bg.jpg) no-repeat bottom center scroll; }
+.intro.beach { background: url(../img/beach_bg.jpg) no-repeat bottom center scroll; }
+.intro.trees { background: url(../img/trees_bg.jpg) no-repeat bottom center scroll; }
 
 .intro .intro-body {
     display: table-cell;
