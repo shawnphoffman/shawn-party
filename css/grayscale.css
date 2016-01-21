@@ -162,6 +162,8 @@ a:focus {
 
 .intro.beach { background: url(../img/beach_bg.jpg) no-repeat bottom center scroll; }
 .intro.trees { background: url(../img/trees_bg.jpg) no-repeat bottom center scroll; }
+.intro.shawn { background: url(../img/shawn_bg.jpg) no-repeat bottom center scroll; }
+.intro.dogs  { background: url(../img/shawndogs_bg.jpg) no-repeat bottom center scroll; }
 
 .intro .intro-body {
     display: table-cell;
