@@ -30,6 +30,12 @@ h6 {
     letter-spacing: 1px;
 }
 
+@media(max-width:767px) {
+    .intro.shawndogs, .intro.beach {
+        margin-top: 4em;
+    }
+}
+
 section h1, section h2 { color: #FFFFFF; }
 section h3 { color: #C1FFFF; }
 section h4 { color: #8FFFF0; }
