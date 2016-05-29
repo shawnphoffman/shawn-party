@@ -45,7 +45,7 @@ p, .image {
     font-size: 18px;
     line-height: 1.5;
 }
-.image {     
+.image {
     margin: 0 0 2em 0;
 }
 
@@ -169,6 +169,7 @@ a:focus {
 .intro.beach { background: url(../img/beach_bg.jpg) no-repeat center center scroll; }
 .intro.trees { background: url(../img/trees_bg.jpg) no-repeat center center scroll; }
 .intro.shawn { background: url(../img/shawn_bg.jpg) no-repeat center center scroll; }
+.intro.spheres { background: url(../img/spheres.jpg) no-repeat center center scroll; }
 .intro.dogs  { background: url(../img/shawndogs_bg.jpg) no-repeat center center scroll; }
 
 .intro .intro-body {
@@ -304,7 +305,7 @@ section .image.halfsie {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -321,7 +322,7 @@ section .image.halfsie {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0% {
         -moz-transform: scale(1);
         transform: scale(1);
