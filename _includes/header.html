@@ -19,7 +19,7 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="/">Home</a>
+                    <a class="page-scroll" href="/"><span class="glyphicon glyphicon-home"></span></a>
                 </li>
                 {% for my_page in site.pages %}
                   {% if my_page.title %}
@@ -37,6 +37,9 @@
                     {% endif %}
                   {% endif %}
                 {% endfor %}
+                <li>
+                    <a class="page-scroll" href="{{ site.baseurl }}#donate">Help!</a>
+                </li>
                 <li>
                     <a class="page-scroll" href="{{ site.baseurl }}#contact">Contact</a>
                 </li>
