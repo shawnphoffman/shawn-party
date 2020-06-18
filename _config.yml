@@ -8,11 +8,11 @@
 # Site settings
 title: Shawn Hoffman
 email: shawn.p.hoffman@gmail.com
-description: > # Official website for Shawn P Hoffman, Bay-Area Software Engineer & Problem Solver.
+description: > # Official website for Shawn Hoffman.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://shawnphoffman.com" # the base hostname & protocol for your site
+url: "https://shawnphoffman.com" # the base hostname & protocol for your site
 # twitter_username: trap
-github_username:  shawnphoffman
+github_username: shawnphoffman
 
 # Build settings
 markdown: kramdown
