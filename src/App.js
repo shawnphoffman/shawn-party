@@ -1,6 +1,26 @@
 import { memo } from 'react'
 import { styled } from 'linaria/react'
 
+import head from './head@3x.png'
+
+const Description = styled.div`
+	margin: 0px 8px 16px 8px;
+	font-size: 16px;
+	text-align: center;
+`
+
+const Header = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+`
+
+const Head = styled.img`
+	height: 100px;
+	margin: 16px;
+`
+
 const AppWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -34,13 +54,20 @@ const Link = styled.a`
 function App() {
 	return (
 		<AppWrapper>
-			<h1>Shawn Hoffman</h1>
+			<Header>
+				<Head src={head} alt="" />
+				<h1>Shawn Hoffman</h1>
+			</Header>
+			<Description>I make websites that don't really need to be made.</Description>
 			<LinkList>
 				<Link target="_blank" rel="noopener" href="/resume">
-					Resume
+					Resume 🥴
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://github.com/shawnphoffman/">
 					GitHub
+				</Link>
+				<Link target="_blank" rel="noopener" href="https://shawnphoffman.com/celebration-calendar/">
+					Celebration 2022 Calendar
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://dyson-sphere-planner.com/">
 					Dyson Sphere Planner
@@ -50,9 +77,6 @@ function App() {
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://applauseforhawes.com/">
 					Applause for Hawes
-				</Link>
-				<Link target="_blank" rel="noopener" href="https://shawnphoffman.com/celebration-calendar/">
-					Celebration 2022 Calendar
 				</Link>
 			</LinkList>
 		</AppWrapper>
