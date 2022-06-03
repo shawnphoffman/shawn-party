@@ -75,6 +75,9 @@ function App() {
 				<Link target="_blank" rel="noopener" href="https://satisfactory-notebook.com/">
 					Satisfactory Notebook
 				</Link>
+				<Link target="_blank" rel="noopener" href="https://spoilersarelame.com/?t=uryyb,%20ivfvgbe!">
+					Spoilers are Lame 👎
+				</Link>
 				<Link target="_blank" rel="noopener" href="https://applauseforhawes.com/">
 					Applause for Hawes
 				</Link>
