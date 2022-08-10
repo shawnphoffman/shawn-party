@@ -42,6 +42,7 @@
 	"devDependencies": {
 		"@craco/craco": "^6.4.3",
 		"eslint": "^8.14.0",
-		"eslint-plugin-simple-import-sort": "^7.0.0"
+		"eslint-plugin-simple-import-sort": "^7.0.0",
+		"html-inline-css-webpack-plugin": "^1.11.1"
 	}
 }
