@@ -55,7 +55,7 @@ function App() {
 	return (
 		<AppWrapper>
 			<Header>
-				<Head src={head} alt="" />
+				<Head src={head} alt="Illustration of my goofy face" />
 				<h1>Shawn Hoffman</h1>
 			</Header>
 			<Description>I make websites that don't really need to be made.</Description>
@@ -66,8 +66,11 @@ function App() {
 				<Link target="_blank" rel="noopener" href="https://github.com/shawnphoffman/">
 					GitHub
 				</Link>
-				<Link target="_blank" rel="noopener" href="https://shawnphoffman.com/celebration-calendar/">
-					Celebration 2022 Calendar
+				<Link target="_blank" rel="noopener" href="https://spoilersarelame.com/?t=uryyb,%20ivfvgbe!">
+					Spoilers are Lame 👎
+				</Link>
+				<Link target="_blank" rel="noopener" href="https://blueharvest.rocks/">
+					Blue Harvest Rocks
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://dyson-sphere-planner.com/">
 					Dyson Sphere Planner
@@ -75,11 +78,8 @@ function App() {
 				<Link target="_blank" rel="noopener" href="https://satisfactory-notebook.com/">
 					Satisfactory Notebook
 				</Link>
-				<Link target="_blank" rel="noopener" href="https://spoilersarelame.com/?t=uryyb,%20ivfvgbe!">
-					Spoilers are Lame 👎
-				</Link>
-				<Link target="_blank" rel="noopener" href="https://applauseforhawes.com/">
-					Applause for Hawes
+				<Link target="_blank" rel="noopener" href="https://shawnphoffman.com/celebration-calendar/">
+					Celebration 2022 Calendar
 				</Link>
 			</LinkList>
 		</AppWrapper>
