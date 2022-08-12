@@ -15,6 +15,9 @@ const Home = () => {
 			{/* eslint-disable-next-line react/no-unescaped-entities */}
 			<Description>I make websites that don't really need to be made.</Description>
 			<LinkList>
+				<Link target="_blank" rel="noopener" href="https://shawn.party/">
+					Blog
+				</Link>
 				<Link target="_blank" rel="noopener" href="https://shawnhoffman.dev/">
 					Resume 🥴
 				</Link>
