@@ -1,31 +1,19 @@
 {
 	"name": "shawn-hoffman",
-	"homepage": "https://shawnphoffman.github.io",
 	"version": "0.1.0",
 	"private": true,
-	"main": "index.js",
 	"dependencies": {
-		"@testing-library/jest-dom": "^5.14.1",
-		"@testing-library/react": "^13.0.0",
-		"@testing-library/user-event": "^13.2.1",
-		"craco-linaria": "^1.1.2",
-		"linaria": "^3.0.0-beta.1",
-		"react": "^18.1.0",
-		"react-dom": "^18.1.0",
-		"react-scripts": "5.0.1",
-		"web-vitals": "^2.1.0"
+		"linaria": "^4.1.2",
+		"next": "^12.2.5",
+		"next-linaria": "^0.11.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
 	"scripts": {
-		"start": "craco start",
-		"build": "craco build",
-		"test": "craco test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
 	},
 	"browserslist": {
 		"production": [
@@ -40,9 +28,8 @@
 		]
 	},
 	"devDependencies": {
-		"@craco/craco": "^6.4.3",
-		"eslint": "^8.14.0",
-		"eslint-plugin-simple-import-sort": "^7.0.0",
-		"html-inline-css-webpack-plugin": "^1.11.1"
+		"eslint": "^8.21.0",
+		"eslint-config-next": "^12.2.5",
+		"eslint-plugin-simple-import-sort": "^7.0.0"
 	}
 }
