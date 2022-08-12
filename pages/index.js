@@ -33,7 +33,7 @@ const Home = () => {
 				<Link target="_blank" rel="noopener" href="https://satisfactory-notebook.com/">
 					Satisfactory Notebook
 				</Link>
-				<Link target="_blank" rel="noopener" href="https://shawnphoffman.com/celebration-calendar/">
+				<Link target="_blank" rel="noopener" href="https://swc.events/">
 					Celebration 2022 Calendar
 				</Link>
 			</LinkList>
