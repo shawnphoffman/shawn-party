@@ -60,7 +60,7 @@ function App() {
 			</Header>
 			<Description>I make websites that don't really need to be made.</Description>
 			<LinkList>
-				<Link target="_blank" rel="noopener" href="/resume">
+				<Link target="_blank" rel="noopener" href="https://shawnhoffman.dev/">
 					Resume 🥴
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://github.com/shawnphoffman/">
