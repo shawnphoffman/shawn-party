@@ -8,7 +8,7 @@ const Home = () => {
 		<AppWrapper>
 			<Header>
 				<HeadContainer>
-					<Image src={head} alt="Illustration of my goofy face" />
+					<Image height={100} width={62} layout="fixed" src={head} alt="Illustration of my goofy face" />
 				</HeadContainer>
 				<h1>Shawn Hoffman</h1>
 			</Header>
