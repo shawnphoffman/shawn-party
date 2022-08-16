@@ -25,3 +25,9 @@ h3 {
 h4 {
 	color: #13678a;
 }
+a {
+	color: white;
+}
+a:hover {
+	color: #9aeba3;
+}

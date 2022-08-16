@@ -1,9 +1,14 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document() {
 	return (
 		<Html>
 			<Head>
+				{/* Normalize */}
+				<Script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" defer />
+
+				{/* Google Fonts */}
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 				<link
@@ -11,7 +16,9 @@ export default function Document() {
 					rel="stylesheet"
 				></link>
 				<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&text=Shawn%20Hoffman&display=swap" rel="stylesheet" />
-				<script async src="https://kit.fontawesome.com/94ef14ccff.js" crossOrigin="anonymous"></script>
+
+				{/* FontAwesome Icons */}
+				<Script src="https://kit.fontawesome.com/94ef14ccff.js" strategy="afterInteractive" crossOrigin="anonymous" />
 			</Head>
 			<body>
 				<Main />
