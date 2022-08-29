@@ -8,7 +8,8 @@ const Home = () => {
 		<AppWrapper>
 			<Header>
 				<HeadContainer>
-					<Image height={100} width={62} layout="fixed" src={head} alt="Illustration of my goofy face" />
+					{/* <Image height={100} width={62} layout="fixed" src={head} alt="Illustration of my goofy face" /> */}
+					<Image height={50} width={31} layout="fixed" src={head} alt="Illustration of my goofy face" />
 				</HeadContainer>
 				<h1>Shawn Hoffman</h1>
 			</Header>
@@ -28,35 +29,35 @@ const Home = () => {
 			<LinkList>
 				<Link target="_blank" rel="noopener" href="https://blog.shawn.party/">
 					<>Blog</>
-					<Icon className="fa-solid fa-thought-bubble" />
+					{/* <Icon className="fa-solid fa-thought-bubble" /> */}
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://github.com/shawnphoffman/">
 					<>GitHub</>
-					<Icon className="fa-brands fa-github" />
+					{/* <Icon className="fa-brands fa-github" /> */}
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://spoilersarelame.com/?t=uryyb,%20ivfvgbe!">
 					<>Spoilers are Lame</>
-					<Icon className="fa-solid fa-thumbs-down" />
+					{/* <Icon className="fa-solid fa-thumbs-down" /> */}
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://blueharvest.rocks/">
 					<>Blue Harvest Rocks</>
-					<Icon className="fa-solid fa-space-station-moon-construction" />
+					{/* <Icon className="fa-solid fa-space-station-moon-construction" /> */}
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://dyson-sphere-planner.com/">
 					<>Dyson Sphere Planner</>
-					<Icon className="fak fa-dyson-sphere-program" />
+					{/* <Icon className="fak fa-dyson-sphere-program" /> */}
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://satisfactory-notebook.com/">
 					<>Satisfactory Notebook</>
-					<Icon className="fak fa-satisfactory" />
+					{/* <Icon className="fak fa-satisfactory" /> */}
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://swc.events/">
 					<>Celebration 2022 Calendar</>
-					<Icon className="fa-solid fa-calendar-range" />
+					{/* <Icon className="fa-solid fa-calendar-range" /> */}
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://shawnhoffman.dev/">
 					<>Resume (Outdated)</>
-					<Icon className="fa-solid fa-briefcase-blank" />
+					{/* <Icon className="fa-solid fa-briefcase-blank" /> */}
 				</Link>
 			</LinkList>
 		</AppWrapper>
@@ -78,8 +79,8 @@ const Header = styled.div`
 	align-items: center;
 `
 const HeadContainer = styled.div`
-	width: 62px;
-	height: 100px;
+	/* width: 62px; */
+	/* height: 100px; */
 	margin: 16px;
 `
 const AppWrapper = styled.div`
@@ -92,7 +93,8 @@ const AppWrapper = styled.div`
 const LinkList = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	/* align-items: center; */
+	align-items: stretch;
 `
 const Link = styled.a`
 	background: #45c4b0;

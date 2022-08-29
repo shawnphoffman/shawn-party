@@ -25,6 +25,9 @@ function App({ Component, pageProps }) {
 				<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
 				<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
 				<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+				{/* Preloads */}
+				<link rel="preload" href="/fonts/BerkeleyMonoVariable-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+				<link rel="preload" href="/fonts/BerkeleyMonoVariable-Italic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
 			</Head>
 			<Layout>
 				<Component {...pageProps} />
