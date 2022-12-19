@@ -25,6 +25,9 @@ const Home = () => {
 				<SocialIcon href="https://twitch.tv/ice_planet_hoff" target="_blank" rel="noopener">
 					<i className="fa-brands fa-twitch" />
 				</SocialIcon>
+				<SocialIcon rel="me" href="https://mastodon.social/@ice_planet_hoff" target="_blank">
+					<i className="fa-brands fa-mastodon" />
+				</SocialIcon>
 			</SocialLinks>
 			<LinkList>
 				<Link target="_blank" rel="noopener" href="https://blog.shawn.party/">
@@ -60,6 +63,20 @@ const Home = () => {
 					{/* <Icon className="fa-solid fa-briefcase-blank" /> */}
 				</Link>
 			</LinkList>
+			{/* <SocialLinks>
+				<SocialIcon href="https://steamcommunity.com/id/shawnhoffman/" target="_blank" rel="noopener">
+					<i className="fa-brands fa-steam" />
+				</SocialIcon>
+				<SocialIcon href="https://live.xbox.com/Profile?Gamertag=hashtag4realdoe" target="_blank" rel="noopener">
+					<i className="fa-brands fa-xbox" />
+				</SocialIcon>
+				<SocialIcon href="xxx" target="_blank" rel="noopener">
+					<i className="fa-brands fa-playstation" />
+				</SocialIcon>
+				<SocialIcon href="xxx" target="_blank" rel="noopener">
+					<i className="fa-brands fa-discord" />
+				</SocialIcon>
+			</SocialLinks> */}
 		</AppWrapper>
 	)
 }
