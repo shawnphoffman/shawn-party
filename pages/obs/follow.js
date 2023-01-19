@@ -1,5 +1,6 @@
-import { memo } from 'react'
+import { memo, useMemo } from 'react'
 import { styled } from 'linaria/react'
+import { useRouter } from 'next/router'
 
 const Text = styled.div`
 	font-size: 36px;
@@ -14,9 +15,15 @@ const Container = styled.div`
 `
 
 const Follow = () => {
+	const { query } = useRouter()
+
+	const text = useMemo(() => {
+		return query?.text || 'Please consider following'
+	}, [query])
+
 	return (
 		<Container>
-			<Text className="animate-character">Please consider following</Text>
+			<Text className="animate-character">{text}</Text>
 			<Text className="wave">
 				<span style={{ '--i': '1' }}>P</span>
 				<span style={{ '--i': '2' }}>L</span>
@@ -37,8 +44,8 @@ const Follow = () => {
 			</Text>
 			<Text>
 				<div className="content">
-					<div>Please consider following</div>
-					<div>Please consider following</div>
+					<div>{text}</div>
+					<div>{text}</div>
 				</div>
 			</Text>
 		</Container>
