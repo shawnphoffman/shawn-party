@@ -1,7 +1,24 @@
-.animate-character {
+/*  */
+@keyframes fadeAnimation {
+	0%,
+	5%,
+	25%,
+	100% {
+		opacity: 0;
+	}
+	10%,
+	20% {
+		opacity: 1;
+	}
+}
+.animate {
+	animation: fadeAnimation 60s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+}
+
+/*  */
+.gradient {
 	text-transform: uppercase;
 	background-image: linear-gradient(-225deg, #fff800 0%, #00f1ff 29%, #ff94b1 67%, #fff800 100%);
-	/* background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%); */
 	background-size: auto auto;
 	background-clip: border-box;
 	background-size: 200% auto;
@@ -10,32 +27,32 @@
 	text-fill-color: transparent;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: textClip 2s linear infinite;
+	animation: gradient 2s linear infinite;
 	display: inline-block;
 }
 
-@keyframes textClip {
+@keyframes gradient {
 	to {
 		background-position: 200% center;
 	}
 }
 
 /*  */
-
-.wave {
+.jump {
 	position: relative;
 	-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 	font-size: 60px;
+	white-space: pre;
 }
-.wave span {
+.jump span {
 	position: relative;
 	display: inline-block;
 	color: #fff;
 	text-transform: uppercase;
-	animation: wave 1.25s infinite;
+	animation: jump 1.25s infinite;
 	animation-delay: calc(0.1s * var(--i));
 }
-@keyframes wave {
+@keyframes jump {
 	0%,
 	40%,
 	100% {
@@ -47,30 +64,29 @@
 }
 
 /*  */
-
-.content {
+.wave {
 	white-space: nowrap;
 	font-size: 1.25em;
 }
 
-.content div {
+.wave div {
 	color: #fff;
 	font-size: 1em;
 	position: absolute;
 	transform: translate(-100%, 0%);
 }
 
-.content div:nth-child(1) {
+.wave div:nth-child(1) {
 	/* color: transparent; */
 	/* -webkit-text-stroke: 1px white; */
 }
 
-.content div:nth-child(2) {
+.wave div:nth-child(2) {
 	color: greenyellow;
-	animation: animate 4s ease-in-out infinite;
+	animation: wave 4s ease-in-out infinite;
 }
 
-@keyframes animate {
+@keyframes wave {
 	0%,
 	100% {
 		clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
