@@ -3,6 +3,10 @@ import { styled } from 'linaria/react'
 
 import ObsText, { TextStyle } from 'components/obs/ObsText'
 
+const ExampleContainer = styled.div`
+	width: 350px;
+`
+
 const Label = styled.label`
 	margin: 0px 8px;
 `
@@ -10,8 +14,6 @@ const Label = styled.label`
 const Dropdown = styled.select`
 	margin: 8px 0px;
 `
-
-// import { useRouter } from 'next/router'
 
 const NativeControl = styled.input`
 	margin: 0;
@@ -70,25 +72,19 @@ const Help = () => {
 	return (
 		<>
 			<h1>OBS Source Help</h1>
-			<h2>Text</h2>
+			<h2>Animated Text</h2>
 			<h3>Examples</h3>
-			<ul>
-				<li>
-					<a href="/obs/text?text=Hello%20there%20friend!&debug=true&style=gradient" target="_blank">
-						Gradient
-					</a>
-				</li>
-				<li>
-					<a href="/obs/text?text=Hello%20there%20friend!&debug=true&style=jump" target="_blank">
-						Jump
-					</a>
-				</li>
-				<li>
-					<a href="/obs/text?text=Hello%20there%20friend!&debug=true&style=wave" target="_blank">
-						Wave
-					</a>
-				</li>
-			</ul>
+			<ExampleContainer>
+				<ObsText textStyle={TextStyle.GRADIENT} debug>
+					Gradient Style
+				</ObsText>
+				<ObsText textStyle={TextStyle.JUMP} debug>
+					Jump Style
+				</ObsText>
+				<ObsText textStyle={TextStyle.WAVE} debug>
+					Wave Style
+				</ObsText>
+			</ExampleContainer>
 
 			<h3>Text Builder</h3>
 			<NativeControl type="text" onChange={handleTextChange} value={originalText} />
