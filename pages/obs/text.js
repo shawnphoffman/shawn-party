@@ -2,6 +2,8 @@ import { memo, useMemo } from 'react'
 import { styled } from 'linaria/react'
 import { useRouter } from 'next/router'
 
+import ObsText from 'components/obs/ObsText'
+
 const TextStyle = {
 	GRADIENT: 'gradient',
 	JUMP: 'jump',
@@ -36,24 +38,9 @@ const Follow = () => {
 	}, [query])
 
 	return (
-		<Container className={debug || 'animate'}>
-			{style === TextStyle.GRADIENT && <Text className="gradient">{text}</Text>}
-			{style === TextStyle.JUMP && (
-				<Text className="jump">
-					{[...text].map((t, i) => (
-						<span key={i} style={{ '--i': i + 1 }}>
-							{t}
-						</span>
-					))}
-				</Text>
-			)}
-			{style === TextStyle.WAVE && (
-				<Text className="wave">
-					<div>{text}</div>
-					<div>{text}</div>
-				</Text>
-			)}
-		</Container>
+		<ObsText style={style} debug={debug}>
+			{text}
+		</ObsText>
 	)
 }
 
