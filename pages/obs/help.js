@@ -3,6 +3,16 @@ import { styled } from 'linaria/react'
 
 import ObsText, { TextStyle } from 'components/obs/ObsText'
 
+const HorizontalRule = styled.hr`
+	margin: 32px 0px;
+`
+
+const Video = styled.video`
+	width: 100%;
+	height: auto;
+	max-width: 720px;
+`
+
 const ExampleContainer = styled.div`
 	width: 350px;
 `
@@ -41,6 +51,8 @@ const NativeControl = styled.input`
 	}
 
 	width: 100%;
+	display: block;
+	max-width: 720px;
 `
 
 const Help = () => {
@@ -72,7 +84,7 @@ const Help = () => {
 	return (
 		<>
 			<h1>OBS Source Help</h1>
-			<hr />
+			<HorizontalRule />
 
 			<h2>Animated Text</h2>
 			<div>Useful for displaying basic animated text (e.g. &quot;Please follow&quot;)</div>
@@ -126,7 +138,7 @@ const Help = () => {
 				Click here for your personalized link!
 			</a>
 
-			<hr />
+			<HorizontalRule />
 			<h2>Follower Count</h2>
 			<div>Useful for displaying your current follower count and, optionally, your follower goal.</div>
 			<h3>Options</h3>
@@ -158,7 +170,13 @@ const Help = () => {
 					</a>
 				</li>
 			</ul>
-			<br />
+
+			<HorizontalRule />
+			<h2>OBS Demo</h2>
+			<Video autoPlay loop muted>
+				<source src="/images/obs-text-demo.mp4" type="video/mp4" />
+				Your browser does not support the video tag.
+			</Video>
 		</>
 	)
 }
