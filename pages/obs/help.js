@@ -76,6 +76,14 @@ const Help = () => {
 
 			<h2>Animated Text</h2>
 			<div>Useful for displaying basic animated text (e.g. &quot;Please follow&quot;)</div>
+
+			<h3>Options</h3>
+			<ul>
+				<li>Text: The text to display</li>
+				<li>Style: The style of text animation. See below</li>
+				<li>Debug: Enabling this will prevent the text from fading in and out</li>
+			</ul>
+
 			<h3>Examples</h3>
 			<ExampleContainer>
 				<ObsText textStyle={TextStyle.GRADIENT} debug>
@@ -108,16 +116,15 @@ const Help = () => {
 			<ObsText textStyle={textStyle} debug={debug}>
 				{originalText || ''}
 			</ObsText>
-			<div>
-				<a href={`/obs/text?text=${encoded}&debug=${debug.toString()}&style=${textStyle}`} target="_blank" rel="noreferrer">
-					Click here for your personalized link!
-				</a>
-			</div>
 
 			<h4>URL Preview</h4>
 			<pre>
 				/obs/text?text={encoded}&debug={debug.toString()}&style={textStyle}
 			</pre>
+			<h4>Personalized URL</h4>
+			<a href={`/obs/text?text=${encoded}&debug=${debug.toString()}&style=${textStyle}`} target="_blank" rel="noreferrer">
+				Click here for your personalized link!
+			</a>
 
 			<hr />
 			<h2>Follower Count</h2>

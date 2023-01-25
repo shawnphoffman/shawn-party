@@ -15,9 +15,10 @@ const Text = styled.div`
 const Wow = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-end;
-	padding-bottom: 12px;
+	/* justify-content: flex-end; */
+	/* align-items: flex-end; */
+	padding: 16px;
+	/* background-color: red; */
 `
 
 const ObsText = ({ textStyle = TextStyle.JUMP, debug = false, children }) => {

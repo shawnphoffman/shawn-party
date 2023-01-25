@@ -74,7 +74,7 @@
 	color: #fff;
 	font-size: 1em;
 	position: absolute;
-	transform: translate(-100%, 0%);
+	/* transform: translate(-100%, 0%); */
 }
 
 .wave div:nth-child(1) {
