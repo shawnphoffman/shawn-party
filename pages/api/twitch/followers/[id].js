@@ -78,8 +78,7 @@ export default async function handler(req, res) {
 		res.json({
 			total: followers.total,
 		})
-		res.end()
+	} else {
+		res.json(followers)
 	}
-
-	res.json(followers)
 }
