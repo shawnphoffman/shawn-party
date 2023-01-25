@@ -72,7 +72,10 @@ const Help = () => {
 	return (
 		<>
 			<h1>OBS Source Help</h1>
+			<hr />
+
 			<h2>Animated Text</h2>
+			<div>Useful for displaying basic animated text (e.g. &quot;Please follow&quot;)</div>
 			<h3>Examples</h3>
 			<ExampleContainer>
 				<ObsText textStyle={TextStyle.GRADIENT} debug>
@@ -84,6 +87,9 @@ const Help = () => {
 				<ObsText textStyle={TextStyle.WAVE} debug>
 					Wave Style
 				</ObsText>
+				<ObsText textStyle={TextStyle.NONE} debug>
+					None Style
+				</ObsText>
 			</ExampleContainer>
 
 			<h3>Text Builder</h3>
@@ -92,6 +98,7 @@ const Help = () => {
 				<option>{TextStyle.GRADIENT}</option>
 				<option>{TextStyle.JUMP}</option>
 				<option>{TextStyle.WAVE}</option>
+				<option>{TextStyle.NONE}</option>
 			</Dropdown>
 			<div>
 				<input type="checkbox" name="debug" onChange={handleDebugChange} checked={debug} />
@@ -111,6 +118,40 @@ const Help = () => {
 			<pre>
 				/obs/text?text={encoded}&debug={debug.toString()}&style={textStyle}
 			</pre>
+
+			<hr />
+			<h2>Follower Count</h2>
+			<div>Useful for displaying your current follower count and, optionally, your follower goal.</div>
+			<h3>Options</h3>
+			<ul>
+				<li>ID (required): Your Twitch user ID</li>
+				<li>Goal: Your follower goal. Displayed next to your current follower count</li>
+				<li>Style: Text style to apply to the text. See above.</li>
+			</ul>
+			<h3>Examples</h3>
+			<ul>
+				<li>
+					<a href={`/obs/followers/484182774`} target="_blank" rel="noreferrer">
+						Follower count on its own
+					</a>
+				</li>
+				<li>
+					<a href={`/obs/followers/484182774?prefix=Followers:`} target="_blank" rel="noreferrer">
+						Follower count with a prefix
+					</a>
+				</li>
+				<li>
+					<a href={`/obs/followers/484182774?goal=50`} target="_blank" rel="noreferrer">
+						Follower count with a goal
+					</a>
+				</li>
+				<li>
+					<a href={`/obs/followers/484182774?style=jump`} target="_blank" rel="noreferrer">
+						Follower count with a custom style
+					</a>
+				</li>
+			</ul>
+			<br />
 		</>
 	)
 }

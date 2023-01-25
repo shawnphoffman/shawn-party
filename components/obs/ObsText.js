@@ -5,6 +5,7 @@ export const TextStyle = {
 	GRADIENT: 'gradient',
 	JUMP: 'jump',
 	WAVE: 'wave',
+	NONE: 'none',
 }
 
 const Text = styled.div`
@@ -21,7 +22,7 @@ const Wow = styled.div`
 
 const ObsText = ({ textStyle = TextStyle.JUMP, debug = false, children }) => {
 	return (
-		<div className={debug || 'animate'}>
+		<div className={debug ? null : 'animate'}>
 			<Wow>
 				{textStyle === TextStyle.GRADIENT && <Text className="gradient">{children}</Text>}
 				{textStyle === TextStyle.JUMP && (
@@ -39,6 +40,7 @@ const ObsText = ({ textStyle = TextStyle.JUMP, debug = false, children }) => {
 						<div>{children}</div>
 					</Text>
 				)}
+				{textStyle === TextStyle.NONE && <Text>{children}</Text>}
 			</Wow>
 		</div>
 	)
