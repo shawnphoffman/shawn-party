@@ -41,19 +41,17 @@ const Followers = ({ goal, count }) => {
 		return TextStyle[query?.style?.toUpperCase()] || TextStyle.NONE
 	}, [query])
 
+	const finalText = useMemo(() => {
+		return prefix ? `${prefix} ${text}` : text
+	}, [prefix, text])
+
 	if (!count) {
 		return null
 	}
 
 	return (
 		<ObsText textStyle={style} debug={true}>
-			{prefix && (
-				<>
-					{prefix}
-					{` `}
-				</>
-			)}
-			{text}
+			{finalText}
 		</ObsText>
 	)
 }
