@@ -9,7 +9,7 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 // Server data fetch
 export async function getServerSideProps(context) {
 	const { id } = context.params
-	const { goal } = context?.query
+	const { goal, interval } = context?.query
 	const { host } = context.req?.headers
 
 	// console.log({ id, goal, host })
@@ -26,15 +26,16 @@ export async function getServerSideProps(context) {
 			id,
 			goal: goal?.toString() || null,
 			count: (count || 0).toString(),
+			interval: interval || 300000, // 5 minutes
 		},
 	}
 }
 
-const Followers = ({ id, goal, count }) => {
+const Followers = ({ id, goal, count, interval }) => {
 	const { query } = useRouter()
 
 	const { data, error, isLoading } = useSWR(`/api/twitch/followers/${id}?countOnly=true`, fetcher, {
-		refreshInterval: 300000, // 5 minutes
+		refreshInterval: interval,
 		fallbackData: { total: count },
 	})
 
@@ -62,9 +63,14 @@ const Followers = ({ id, goal, count }) => {
 		return null
 	}
 
+	if (error) return <pre>Error: {JSON.stringify(error, null, 2)}</pre>
+	if (isLoading) return <div>Loading...</div>
+
 	return (
-		<ObsText textStyle={style} debug={true}>
-			{finalText}
+		<>
+			<ObsText textStyle={style} debug={true}>
+				{finalText}
+			</ObsText>
 			{/* <div>
 				<pre>
 					<ul>
@@ -74,7 +80,7 @@ const Followers = ({ id, goal, count }) => {
 					</ul>
 				</pre>
 			</div> */}
-		</ObsText>
+		</>
 	)
 }
 

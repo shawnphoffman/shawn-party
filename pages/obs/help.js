@@ -25,7 +25,7 @@ const Dropdown = styled.select`
 	margin: 8px 0px;
 `
 
-const NativeControl = styled.input`
+export const NativeControl = styled.input`
 	margin: 0;
 	margin-bottom: 8px;
 	padding: 12px 16px;
@@ -84,6 +84,11 @@ const Help = () => {
 	return (
 		<>
 			<h1>OBS Source Help</h1>
+			<HorizontalRule />
+
+			<h2>Twitch User ID Lookup</h2>
+			<a href="/obs/twitch/lookup">Click here to lookup your Twitch user ID</a>
+
 			<HorizontalRule />
 
 			<h2>Animated Text</h2>
