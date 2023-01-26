@@ -1,7 +1,10 @@
 import { memo, useMemo } from 'react'
 import { useRouter } from 'next/router'
+import useSWR from 'swr'
 
 import ObsText, { TextStyle } from 'components/obs/ObsText'
+
+const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 // Server data fetch
 export async function getServerSideProps(context) {
@@ -20,18 +23,28 @@ export async function getServerSideProps(context) {
 
 	return {
 		props: {
+			id,
 			goal: goal?.toString() || null,
 			count: (count || 0).toString(),
 		},
 	}
 }
 
-const Followers = ({ goal, count }) => {
+const Followers = ({ id, goal, count }) => {
 	const { query } = useRouter()
 
+	const { data, error, isLoading } = useSWR(`/api/twitch/followers/${id}?countOnly=true`, fetcher, {
+		refreshInterval: 300000, // 5 minutes
+		fallbackData: { total: count },
+	})
+
+	const followerCount = useMemo(() => {
+		return data?.total
+	}, [data?.total])
+
 	const text = useMemo(() => {
-		return goal ? `${count}/${goal}` : count
-	}, [count, goal])
+		return goal ? `${followerCount}/${goal}` : followerCount
+	}, [followerCount, goal])
 
 	const prefix = useMemo(() => {
 		return query?.prefix || ''
@@ -52,6 +65,15 @@ const Followers = ({ goal, count }) => {
 	return (
 		<ObsText textStyle={style} debug={true}>
 			{finalText}
+			{/* <div>
+				<pre>
+					<ul>
+						<li>{JSON.stringify(data, null, 2)}</li>
+						<li>Error: {JSON.stringify(error, null, 2)}</li>
+						<li>Loading: {isLoading}</li>
+					</ul>
+				</pre>
+			</div> */}
 		</ObsText>
 	)
 }
