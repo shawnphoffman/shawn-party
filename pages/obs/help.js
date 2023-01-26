@@ -87,7 +87,9 @@ const Help = () => {
 			<HorizontalRule />
 
 			<h2>Twitch User ID Lookup</h2>
-			<a href="/obs/twitch/lookup">Click here to lookup your Twitch user ID</a>
+			<a href="/obs/twitch/lookup" target="_blank" rel="noreferrer">
+				Click here to lookup your Twitch user ID
+			</a>
 
 			<HorizontalRule />
 
