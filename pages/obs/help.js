@@ -180,7 +180,7 @@ const Help = () => {
 
 			<HorizontalRule />
 			<h2>OBS Demo</h2>
-			<Video autoPlay loop muted>
+			<Video autoPlay loop muted controls>
 				<source src="/images/obs-text-demo.mp4" type="video/mp4" />
 				Your browser does not support the video tag.
 			</Video>
