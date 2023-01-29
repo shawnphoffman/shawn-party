@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import { memo, useCallback, useMemo, useState } from 'react'
+import { memo, useCallback, useEffect, useMemo, useState } from 'react'
 import { styled } from 'linaria/react'
+import { useRouter } from 'next/router'
 
 const HorizontalRule = styled.hr`
 	margin: 32px 0px;
@@ -37,11 +38,28 @@ const NativeControl = styled.input`
 `
 
 const Names = () => {
+	const { query } = useRouter()
 	const [first, setFirst] = useState('')
 	const [last, setLast] = useState('')
 	const [maiden, setMaiden] = useState('')
 	const [town, setTown] = useState('')
 	const [output, setOutput] = useState('')
+	const [loading, setLoading] = useState(false)
+
+	useEffect(() => {
+		if (query.first) {
+			setFirst(query.first)
+		}
+		if (query.last) {
+			setLast(query.last)
+		}
+		if (query.maiden) {
+			setMaiden(query.maiden)
+		}
+		if (query.town) {
+			setTown(query.town)
+		}
+	}, [query])
 
 	const buttonDisabled = useMemo(() => {
 		return !(first && last && maiden && town)
@@ -64,6 +82,7 @@ const Names = () => {
 	}, [])
 
 	const handleSubmit = useCallback(async () => {
+		setLoading(true)
 		var requestOptions = {
 			method: 'POST',
 			headers: {
@@ -81,6 +100,7 @@ const Names = () => {
 		const res = await fetch('https://api.shawn.party/api/star-wars/name-generator', requestOptions)
 		const data = await res.json()
 
+		setLoading(false)
 		setOutput(data.full)
 	}, [first, last, maiden, town])
 
@@ -101,6 +121,11 @@ const Names = () => {
 			<button disabled={buttonDisabled} onClick={handleSubmit}>
 				Generate Name
 			</button>
+			{loading && (
+				<>
+					<h2>Loading...</h2>
+				</>
+			)}
 			{output && (
 				<>
 					<h2>Generated Name</h2>
