@@ -25,6 +25,9 @@ const Home = () => {
 				<SocialIcon href="https://twitch.tv/ice_planet_hoff" target="_blank" rel="noopener">
 					<i className="fa-brands fa-twitch" />
 				</SocialIcon>
+				<SocialIcon rel="me" href="https://discord.com/users/279373835978014721" target="_blank">
+					<i className="fa-brands fa-discord" />
+				</SocialIcon>
 				<SocialIcon rel="me" href="https://mastodon.social/@ice_planet_hoff" target="_blank">
 					<i className="fa-brands fa-mastodon" />
 				</SocialIcon>
@@ -132,10 +135,22 @@ const Link = styled.a`
 const SocialLinks = styled.div`
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	@media (max-width: 550px) {
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
 `
 const SocialIcon = styled.a`
 	font-size: 36px;
 	margin: 32px;
+
+	@media (max-width: 550px) {
+		margin-bottom: 8px;
+		margin-top: 8px;
+	}
 `
 
 export default memo(Home)
