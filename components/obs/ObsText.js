@@ -1,6 +1,8 @@
 import { memo } from 'react'
 import { styled } from 'linaria/react'
 
+// window.obsstudio
+
 export const TextStyle = {
 	GRADIENT: 'gradient',
 	JUMP: 'jump',

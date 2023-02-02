@@ -15,7 +15,7 @@ const Text = () => {
 	}, [query])
 
 	const debug = useMemo(() => {
-		return query?.debug || false
+		return query?.debug === 'true'
 	}, [query])
 
 	return (

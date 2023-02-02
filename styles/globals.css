@@ -1,3 +1,7 @@
+:root {
+	--bg: #012030;
+}
+
 @font-face {
 	font-family: 'BerkeleyMonoVariable';
 	font-style: normal;
@@ -13,15 +17,14 @@
 	src: url('/fonts/BerkeleyMonoVariable-Italic.woff2') format('woff2');
 }
 
-html body {
+body {
 	font-size: 16px;
 	padding: 0;
 	margin: 0;
 	width: 100vw;
 	height: 100vh;
-	/* font-family: 'Open Sans', sans-serif; */
 	font-family: 'BerkeleyMonoVariable', sans-serif;
-	background: #012030;
+	background-color: var(--bg);
 	color: white;
 }
 
