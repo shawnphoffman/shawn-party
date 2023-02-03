@@ -34,59 +34,34 @@ const Home = () => {
 			</SocialLinks>
 			<LinkList>
 				<Link target="_blank" rel="noopener" href="https://blog.shawn.party/">
-					<>Blog</>
-					{/* <Icon className="fa-solid fa-thought-bubble" /> */}
+					Blog
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://github.com/shawnphoffman/">
-					<>GitHub</>
-					{/* <Icon className="fa-brands fa-github" /> */}
+					GitHub
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://spoilersarelame.com/?t=uryyb,%20ivfvgbe!">
-					<>Spoilers are Lame</>
-					{/* <Icon className="fa-solid fa-thumbs-down" /> */}
+					Spoilers are Lame
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://blueharvest.rocks/">
-					<>Blue Harvest Rocks</>
-					{/* <Icon className="fa-solid fa-space-station-moon-construction" /> */}
+					Blue Harvest Rocks
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://dyson-sphere-planner.com/">
-					<>Dyson Sphere Planner</>
-					{/* <Icon className="fak fa-dyson-sphere-program" /> */}
+					Dyson Sphere Planner
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://satisfactory-notebook.com/">
-					<>Satisfactory Notebook</>
-					{/* <Icon className="fak fa-satisfactory" /> */}
+					Satisfactory Notebook
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://swc.events/">
-					<>Celebration 2022 Calendar</>
-					{/* <Icon className="fa-solid fa-calendar-range" /> */}
+					Celebration 2022 Calendar
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://shawnhoffman.dev/">
-					<>Resume (Outdated)</>
-					{/* <Icon className="fa-solid fa-briefcase-blank" /> */}
+					Resume (Outdated)
 				</Link>
+				<Link href="/obs/help">OBS Sources</Link>
 			</LinkList>
-			{/* <SocialLinks>
-				<SocialIcon href="https://steamcommunity.com/id/shawnhoffman/" target="_blank" rel="noopener">
-					<i className="fa-brands fa-steam" />
-				</SocialIcon>
-				<SocialIcon href="https://live.xbox.com/Profile?Gamertag=hashtag4realdoe" target="_blank" rel="noopener">
-					<i className="fa-brands fa-xbox" />
-				</SocialIcon>
-				<SocialIcon href="xxx" target="_blank" rel="noopener">
-					<i className="fa-brands fa-playstation" />
-				</SocialIcon>
-				<SocialIcon href="xxx" target="_blank" rel="noopener">
-					<i className="fa-brands fa-discord" />
-				</SocialIcon>
-			</SocialLinks> */}
 		</AppWrapper>
 	)
 }
-
-const Icon = styled.i`
-	margin-left: 8px;
-`
 const Description = styled.div`
 	margin: 0px 8px 0px 8px;
 	font-size: 16px;
@@ -99,8 +74,6 @@ const Header = styled.div`
 	align-items: center;
 `
 const HeadContainer = styled.div`
-	/* width: 62px; */
-	/* height: 100px; */
 	margin: 16px;
 `
 const AppWrapper = styled.div`
@@ -113,7 +86,6 @@ const AppWrapper = styled.div`
 const LinkList = styled.div`
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; */
 	align-items: stretch;
 `
 const Link = styled.a`
