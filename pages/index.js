@@ -57,7 +57,7 @@ const Home = () => {
 				<Link target="_blank" rel="noopener" href="https://shawnhoffman.dev/">
 					Resume (Outdated)
 				</Link>
-				<Link href="/obs/help">OBS Sources</Link>
+				<Link href="https://obs.shawn.party/">OBS/Stream Helpers</Link>
 			</LinkList>
 		</AppWrapper>
 	)
