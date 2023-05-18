@@ -31,13 +31,19 @@ const Home = () => {
 				<SocialIcon rel="me" href="https://mastodon.social/@ice_planet_hoff" target="_blank">
 					<i className="fa-brands fa-mastodon" />
 				</SocialIcon>
+				<SocialIcon rel="me" href="https://linkedin.com/in/shawnphoffman" target="_blank">
+					<i className="fa-brands fa-linkedin" />
+				</SocialIcon>
+				<SocialIcon rel="me" href="https://github.com/shawnphoffman/" target="_blank">
+					<i className="fa-brands fa-github" />
+				</SocialIcon>
 			</SocialLinks>
 			<LinkList>
 				<Link target="_blank" rel="noopener" href="https://blog.shawn.party/">
 					Blog
 				</Link>
-				<Link target="_blank" rel="noopener" href="https://github.com/shawnphoffman/">
-					GitHub
+				<Link target="_blank" rel="noopener" href="https://shawnhoffman.dev/">
+					Resume
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://spoilersarelame.com/?t=uryyb,%20ivfvgbe!">
 					Spoilers are Lame
@@ -52,12 +58,11 @@ const Home = () => {
 					Satisfactory Notebook
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://swc.events/">
-					Celebration 2022 Calendar
+					Star Wars Celebration Companion
 				</Link>
-				<Link target="_blank" rel="noopener" href="https://shawnhoffman.dev/">
-					Resume (Outdated)
+				<Link target="_blank" rel="noopener" href="https://obs.shawn.party/">
+					OBS/Stream Helpers
 				</Link>
-				<Link href="https://obs.shawn.party/">OBS/Stream Helpers</Link>
 			</LinkList>
 		</AppWrapper>
 	)
@@ -110,7 +115,7 @@ const SocialLinks = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 
-	@media (max-width: 550px) {
+	@media (max-width: 715px) {
 		margin-top: 8px;
 		margin-bottom: 8px;
 	}
@@ -119,7 +124,7 @@ const SocialIcon = styled.a`
 	font-size: 36px;
 	margin: 32px;
 
-	@media (max-width: 550px) {
+	@media (max-width: 715px) {
 		margin-bottom: 8px;
 		margin-top: 8px;
 	}
