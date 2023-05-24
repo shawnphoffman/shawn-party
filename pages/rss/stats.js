@@ -104,12 +104,12 @@ const Names = () => {
 					<h2>Podcast Details</h2>
 					<h3>Title: {output.title}</h3>
 					<h3>Total Episodes: {output.total.count}</h3>
-					<h3>Total Duration: {output.total.duration.display}</h3>
+					<h3>Total Duration: {output.total.duration.display || 'Unknown'}</h3>
 					<h3>Episodes:</h3>
 					<ul>
 						{output.episodes.map(e => (
 							<li key={e.guid}>
-								{e.title} ({e.duration.display})
+								{e.title} {e.duration.display && <span>({e.duration.display})</span>}
 							</li>
 						))}
 					</ul>
