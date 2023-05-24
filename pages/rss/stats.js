@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { memo, useCallback, useEffect, useMemo, useState } from 'react'
 import { styled } from 'linaria/react'
+import { useRouter } from 'next/router'
 
 const HorizontalRule = styled.hr`
 	margin: 32px 0px;
@@ -37,10 +38,17 @@ const NativeControl = styled.input`
 `
 
 const Names = () => {
+	const { query } = useRouter()
 	const [url, setUrl] = useState('')
 	const [output, setOutput] = useState('')
 	const [error, setError] = useState('')
 	const [loading, setLoading] = useState(false)
+
+	useEffect(() => {
+		if (query.url) {
+			setUrl(query.url)
+		}
+	}, [query])
 
 	const buttonDisabled = useMemo(() => {
 		return !url
