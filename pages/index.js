@@ -28,9 +28,6 @@ const Home = () => {
 				<SocialIcon rel="me" href="https://discord.com/users/279373835978014721" target="_blank">
 					<i className="fa-brands fa-discord" />
 				</SocialIcon>
-				<SocialIcon rel="me" href="https://mastodon.social/@ice_planet_hoff" target="_blank">
-					<i className="fa-brands fa-mastodon" />
-				</SocialIcon>
 				<SocialIcon rel="me" href="https://linkedin.com/in/shawnphoffman" target="_blank">
 					<i className="fa-brands fa-linkedin" />
 				</SocialIcon>
@@ -50,6 +47,9 @@ const Home = () => {
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://blueharvest.rocks/">
 					Blue Harvest Rocks
+				</Link>
+				<Link target="_blank" rel="noopener" href="https://jammedtransmissions.com/">
+					Jammed Transmissions
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://dyson-sphere-planner.com/">
 					Dyson Sphere Planner
