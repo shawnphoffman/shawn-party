@@ -31,7 +31,7 @@ const Home = () => {
 				<SocialIcon rel="me" href="https://github.com/shawnphoffman/" target="_blank" title="GitHub">
 					<i className="fa-brands fa-github" />
 				</SocialIcon>
-				<SocialIcon rel="me" href="https://bsky.app/profile/shawnhoffman.bsky.social" target="_blank" title="BlueSky">
+				<SocialIcon rel="me" href="https://bsky.app/profile/shawn.party" target="_blank" title="BlueSky">
 					<i className="fa-solid fa-clouds" />
 				</SocialIcon>
 				<SocialIcon href="https://twitter.com/iceplanethoff" target="_blank" title="Twitter" rel="noopener">
