@@ -16,23 +16,26 @@ const Home = () => {
 			{/* eslint-disable-next-line react/no-unescaped-entities */}
 			<Description>I make websites that don't really need to be made.</Description>
 			<SocialLinks>
-				<SocialIcon href="https://twitter.com/iceplanethoff" target="_blank" rel="noopener">
-					<i className="fa-brands fa-twitter" />
-				</SocialIcon>
-				<SocialIcon href="https://instagram.com/shawnphoffman" target="_blank" rel="noopener">
+				<SocialIcon href="https://instagram.com/shawnphoffman" target="_blank" title="Instagram" rel="noopener">
 					<i className="fa-brands fa-instagram" />
 				</SocialIcon>
-				<SocialIcon href="https://twitch.tv/ice_planet_hoff" target="_blank" rel="noopener">
+				<SocialIcon href="https://twitch.tv/ice_planet_hoff" target="_blank" title="Twitch" rel="noopener">
 					<i className="fa-brands fa-twitch" />
 				</SocialIcon>
-				<SocialIcon rel="me" href="https://discord.com/users/279373835978014721" target="_blank">
+				<SocialIcon rel="me" href="https://discord.com/users/279373835978014721" target="_blank" title="Discord">
 					<i className="fa-brands fa-discord" />
 				</SocialIcon>
-				<SocialIcon rel="me" href="https://linkedin.com/in/shawnphoffman" target="_blank">
+				<SocialIcon rel="me" href="https://linkedin.com/in/shawnphoffman" target="_blank" title="LinkedIn">
 					<i className="fa-brands fa-linkedin" />
 				</SocialIcon>
-				<SocialIcon rel="me" href="https://github.com/shawnphoffman/" target="_blank">
+				<SocialIcon rel="me" href="https://github.com/shawnphoffman/" target="_blank" title="GitHub">
 					<i className="fa-brands fa-github" />
+				</SocialIcon>
+				<SocialIcon rel="me" href="https://bsky.app/profile/shawnhoffman.bsky.social" target="_blank" title="BlueSky">
+					<i className="fa-solid fa-clouds" />
+				</SocialIcon>
+				<SocialIcon href="https://twitter.com/iceplanethoff" target="_blank" title="Twitter" rel="noopener">
+					<i className="fa-brands fa-twitter" />
 				</SocialIcon>
 			</SocialLinks>
 			<LinkList>
@@ -42,14 +45,17 @@ const Home = () => {
 				<Link target="_blank" rel="noopener" href="https://shawnhoffman.dev/">
 					Resume
 				</Link>
-				<Link target="_blank" rel="noopener" href="https://spoilersarelame.com/?t=uryyb,%20ivfvgbe!">
-					Spoilers are Lame
-				</Link>
 				<Link target="_blank" rel="noopener" href="https://blueharvest.rocks/">
 					Blue Harvest Rocks
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://jammedtransmissions.com/">
 					Jammed Transmissions
+				</Link>
+				<Link target="_blank" rel="noopener" href="https://swc.events/">
+					Star Wars Celebration Companion
+				</Link>
+				<Link target="_blank" rel="noopener" href="https://obs.shawn.party/">
+					OBS/Stream Helpers
 				</Link>
 				<Link target="_blank" rel="noopener" href="https://dyson-sphere-planner.com/">
 					Dyson Sphere Planner
@@ -57,11 +63,8 @@ const Home = () => {
 				<Link target="_blank" rel="noopener" href="https://satisfactory-notebook.com/">
 					Satisfactory Notebook
 				</Link>
-				<Link target="_blank" rel="noopener" href="https://swc.events/">
-					Star Wars Celebration Companion
-				</Link>
-				<Link target="_blank" rel="noopener" href="https://obs.shawn.party/">
-					OBS/Stream Helpers
+				<Link target="_blank" rel="noopener" href="https://spoilersarelame.com/?t=uryyb,%20ivfvgbe!">
+					Spoilers are Lame
 				</Link>
 			</LinkList>
 		</AppWrapper>
@@ -122,7 +125,7 @@ const SocialLinks = styled.div`
 `
 const SocialIcon = styled.a`
 	font-size: 36px;
-	margin: 32px;
+	margin: 32px 16px;
 
 	@media (max-width: 715px) {
 		margin-bottom: 8px;
