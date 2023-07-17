@@ -1,52 +1,49 @@
 :root {
 	--bg: #012030;
+	--c1: #dafdba;
+	--c2: #9aeba3;
+	--c3: #45c4b0;
+	--c4: #13678a;
+	--white: #fff;
 }
 
-@font-face {
-	font-family: 'BerkeleyMonoVariable';
-	font-style: normal;
-	font-stretch: 100%;
-	font-display: swap;
-	src: url('/fonts/BerkeleyMonoVariable-Regular.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'BerkeleyMonoVariable';
-	font-style: italic;
-	font-stretch: 100%;
-	font-display: swap;
-	src: url('/fonts/BerkeleyMonoVariable-Italic.woff2') format('woff2');
-}
-
-body {
+html {
 	font-size: 16px;
 	padding: 0;
 	margin: 0;
 	width: 100vw;
 	height: 100vh;
-	font-family: 'BerkeleyMonoVariable', sans-serif;
 	background-color: var(--bg);
-	color: white;
+	color: var(--white);
+	overflow: scroll;
 }
 
-#__next {
+body {
 	margin: 8px;
+	overflow: scroll;
 }
 
 h1 {
-	color: #dafdba;
+	color: var(--c1);
 }
 h2 {
-	color: #9aeba3;
+	color: var(--c2);
 }
 h3 {
-	color: #45c4b0;
+	color: var(--c3);
 }
 h4 {
-	color: #13678a;
+	color: var(--c4);
 }
 a {
-	color: white;
+	color: var(--white);
 }
 a:hover {
-	color: #9aeba3;
+	color: var(--c2);
+}
+
+input,
+button {
+	font-family: inherit;
+	font-size: 16px;
 }

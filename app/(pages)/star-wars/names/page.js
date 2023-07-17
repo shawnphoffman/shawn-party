@@ -1,44 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
+'use client'
 import { memo, useCallback, useEffect, useMemo, useState } from 'react'
-import { styled } from 'linaria/react'
-import { useRouter } from 'next/router'
+import { useSearchParams } from 'next/navigation'
 
-const HorizontalRule = styled.hr`
-	margin: 32px 0px;
-`
-
-const NativeControl = styled.input`
-	margin: 0;
-	margin-bottom: 8px;
-	padding: 12px 16px;
-	line-height: 1.2;
-	text-align: start;
-	text-indent: 0px;
-	text-transform: none;
-	word-spacing: 0px;
-	border-style: solid;
-	border-width: 0;
-	opacity: 1;
-	flex: 1;
-	user-select: all;
-
-	&:focus {
-		outline-style: none;
-		box-shadow: none;
-	}
-
-	&:read-only {
-		color: grey;
-		user-select: all;
-	}
-
-	width: 100%;
-	display: block;
-	max-width: 720px;
-`
+import styles from '../../Styles.module.css'
 
 const Names = () => {
-	const { query } = useRouter()
+	const query = useSearchParams()
 	const [first, setFirst] = useState('')
 	const [last, setLast] = useState('')
 	const [maiden, setMaiden] = useState('')
@@ -47,17 +14,21 @@ const Names = () => {
 	const [loading, setLoading] = useState(false)
 
 	useEffect(() => {
-		if (query.first) {
-			setFirst(query.first)
+		const qFirst = query.get('first')
+		if (qFirst) {
+			setFirst(qFirst)
 		}
-		if (query.last) {
-			setLast(query.last)
+		const qLast = query.get('last')
+		if (qLast) {
+			setLast(qLast)
 		}
-		if (query.maiden) {
-			setMaiden(query.maiden)
+		const qMaiden = query.get('maiden')
+		if (qMaiden) {
+			setMaiden(qMaiden)
 		}
-		if (query.town) {
-			setTown(query.town)
+		const qTown = query.get('town')
+		if (qTown) {
+			setTown(qTown)
 		}
 	}, [query])
 
@@ -107,16 +78,18 @@ const Names = () => {
 	return (
 		<>
 			<h1>Star Wars Name Generator</h1>
-			<HorizontalRule />
-			<div>I don&apos;t know why I made this. This is currently missing validation so it could break if you don't fill everything in.</div>
+			<hr className={styles.horizontalRule} />
+			<div>
+				I don&apos;t know why I made this. This is currently missing validation so it could break if you don&apos;t fill everything in.
+			</div>
 			<h3>Your first name</h3>
-			<NativeControl type="text" onChange={handleFirstChange} value={first} />
+			<input className={styles.nativeControl} type="text" onChange={handleFirstChange} value={first} />
 			<h3>Your last name</h3>
-			<NativeControl type="text" onChange={handleLastChange} value={last} />
-			<h3>Your mother's maiden name</h3>
-			<NativeControl type="text" onChange={handleMaidenChange} value={maiden} />
+			<input className={styles.nativeControl} type="text" onChange={handleLastChange} value={last} />
+			<h3>Your mother&apos;s maiden name</h3>
+			<input className={styles.nativeControl} type="text" onChange={handleMaidenChange} value={maiden} />
 			<h3>Your childhood hometown</h3>
-			<NativeControl type="text" onChange={handleTownChange} value={town} />
+			<input className={styles.nativeControl} type="text" onChange={handleTownChange} value={town} />
 			<br />
 			<button disabled={buttonDisabled} onClick={handleSubmit}>
 				Generate Name

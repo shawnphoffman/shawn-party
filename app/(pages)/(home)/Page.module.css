@@ -1,0 +1,68 @@
+/*  */
+.appWrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	font-size: 1.5rem;
+}
+/*  */
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.headContainer {
+	margin: 16px;
+}
+/*  */
+.description {
+	margin: 0px 8px 0px 8px;
+	font-size: 16px;
+	text-align: center;
+}
+/*  */
+.socialLinks {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+@media (max-width: 715px) {
+	.socialLinks {
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+}
+.socialIcon {
+	font-size: 36px;
+	margin: 32px 16px;
+}
+@media (max-width: 715px) {
+	.socialIcon {
+		margin-bottom: 8px;
+		margin-top: 8px;
+	}
+}
+/*  */
+.linkList {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+.link {
+	background: var(--c3);
+	border-radius: 4px;
+	color: var(--bg);
+	padding: 16px 32px;
+	cursor: pointer;
+	margin-bottom: 16px;
+	text-align: center;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+.link:hover {
+	background: var(--c2);
+	color: var(--bg);
+}
