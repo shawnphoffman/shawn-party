@@ -9,11 +9,11 @@ const fontRegular = localFont({
 
 export const metadata = {
 	title: 'S̴̳̐h̵̝̉â̸̰w̴͉̐n̸̺̿ ̴͈̓H̸̭̕o̶̭̅f̴̬͝f̵̹̿m̴͙̃a̵̼̚n̷̟̅',
-	description: 'A silly website for a silly person.',
+	description: 'Homepage for Shawn Hoffman',
 	metadataBase: 'https://shawn.party',
 	openGraph: {
 		title: 'S̴̳̐h̵̝̉â̸̰w̴͉̐n̸̺̿ ̴͈̓H̸̭̕o̶̭̅f̴̬͝f̵̹̿m̴͙̃a̵̼̚n̷̟̅',
-		description: 'A silly website for a silly person.',
+		description: 'Homepage for Shawn Hoffman',
 		url: 'https://shawn.party',
 		locale: 'en_US',
 		type: 'website',
