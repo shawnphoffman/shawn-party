@@ -33,9 +33,6 @@ const Home = ({}) => {
 				<a className={styles.socialIcon} rel="me" href="https://bsky.app/profile/shawn.party" target="_blank" title="BlueSky">
 					<i className="fa-solid fa-clouds" />
 				</a>
-				<a className={styles.socialIcon} href="https://twitter.com/iceplanethoff" target="_blank" title="Twitter" rel="noopener">
-					<i className="fa-brands fa-twitter" />
-				</a>
 			</div>
 			<div className={styles.linkList}>
 				<a className={styles.link} target="_blank" rel="noopener" href="https://blog.shawn.party/">
