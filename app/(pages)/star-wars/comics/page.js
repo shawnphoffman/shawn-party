@@ -4,7 +4,7 @@ const dataUrl = 'https://api.shawn.party/api/syno/comics'
 
 async function getData() {
 	try {
-		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 } })
+		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 * 24 } })
 		const data = await res.json()
 
 		const { files } = data
