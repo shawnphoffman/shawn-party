@@ -47,3 +47,7 @@ button {
 	font-family: inherit;
 	font-size: 16px;
 }
+
+svg *:focus {
+	outline: none;
+}
