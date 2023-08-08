@@ -1,0 +1,70 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Kokomo, IN"
+			},
+			"geometry": {
+				"coordinates": [
+					-86.1333508121495,
+					40.485995349954806
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Palo Alto, CA"
+			},
+			"geometry": {
+				"coordinates": [
+					-122.15584977971928,
+					37.44478022653908
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Memphis, TN"
+			},
+			"geometry": {
+				"coordinates": [
+					-89.97356890546936,
+					35.141931413317735
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "South Lake Tahoe, CA"
+			},
+			"geometry": {
+				"coordinates": [
+					-120.01110538510727,
+					38.923306153744505
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Orlando, FL"
+			},
+			"geometry": {
+				"coordinates": [
+					-81.52468715648978,
+					28.37905077493795
+				],
+				"type": "Point"
+			}
+		}
+	]
+}
