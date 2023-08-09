@@ -3623,7 +3623,8 @@
 			"id": 241,
 			"properties": {
 				"Code": "INDU",
-				"Name": "Indiana Dunes National Lakeshore"
+				"Name": "Indiana Dunes National Lakeshore",
+				"Type": "National Park"
 			},
 			"geometry": {
 				"type": "Point",
