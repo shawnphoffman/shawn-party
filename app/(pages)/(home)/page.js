@@ -50,6 +50,9 @@ const Home = ({}) => {
 				<a className={styles.link} target="_blank" rel="noopener" href="https://jammedtransmissions.com/">
 					Jammed Transmissions
 				</a>
+				<a className={styles.link} target="_blank" rel="noopener" href="https://theblueypodcast.com/">
+					The Bluey Podcast
+				</a>
 				<a className={styles.link} target="_blank" rel="noopener" href="https://swc.events/">
 					Star Wars Celebration Companion
 				</a>
