@@ -5,12 +5,12 @@
 	"dependencies": {
 		"@vx/pattern": "^0.0.199",
 		"geo-albers-usa-territories": "^0.1.0",
-		"next": "^13.4.13",
+		"next": "^13.5.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-simple-maps": "^3.0.0",
-		"react-tooltip": "^5.20.0",
-		"typescript": "^5.1.6"
+		"react-tooltip": "^5.21.6",
+		"typescript": "^5.2.2"
 	},
 	"scripts": {
 		"dev": "next dev",
@@ -31,8 +31,8 @@
 		]
 	},
 	"devDependencies": {
-		"eslint": "^8.46.0",
-		"eslint-config-next": "^13.4.13",
+		"eslint": "^8.52.0",
+		"eslint-config-next": "^13.5.6",
 		"eslint-plugin-simple-import-sort": "^10.0.0"
 	}
 }
