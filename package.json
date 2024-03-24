@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@vercel/analytics": "^1.2.2",
 		"@vx/pattern": "^0.0.199",
 		"geo-albers-usa-territories": "^0.1.0",
 		"next": "^13.5.6",

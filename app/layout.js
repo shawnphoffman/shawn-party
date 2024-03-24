@@ -1,5 +1,6 @@
 import 'styles/globals.css'
 
+import { Analytics } from '@vercel/analytics/react'
 import localFont from 'next/font/local'
 import Script from 'next/script'
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
 			</head>
 			<body>
 				<div>{children}</div>
+				<Analytics />
 			</body>
 		</html>
 	)
