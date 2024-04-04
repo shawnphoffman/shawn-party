@@ -32,7 +32,7 @@ const Stats = () => {
 		setError('')
 
 		try {
-			const fetchUrl = `https://api.shawn.party/api/rss/stats?url=${url}`
+			const fetchUrl = `https://api.shawn.party/api/podcast-data/stats?url=${url}`
 			const res = await fetch(fetchUrl)
 			const data = await res.json()
 			setOutput(data)
