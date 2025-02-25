@@ -82,6 +82,8 @@ const Home = ({}) => {
 				{/* <a className={styles.link} target="_blank" rel="noopener" href="https://spoilersarelame.com/?t=uryyb,%20ivfvgbe!">
 					Spoilers are Lame
 				</a> */}
+				{/* https://cake.avris.it/rC0 */}
+				{/* https://en.pronouns.page/@shawn.party */}
 			</div>
 		</div>
 	)
