@@ -1,4 +1,4 @@
-const nationalParks = [
+const nationalParks: string[] = [
 	'Acadia National Park',
 	// 'Arches National Park',
 	// 'Badlands National Park',

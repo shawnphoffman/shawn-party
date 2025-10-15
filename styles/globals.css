@@ -1,54 +1,39 @@
+@import 'tailwindcss';
+
 :root {
-	--bg: #012030;
+	--box-shadow-x: 4px;
+	--box-shadow-y: 4px;
+	--border: var(--color-zinc-950);
+	--shadow: var(--box-shadow-x) var(--box-shadow-y) 0px 0px var(--color-zinc-950);
+
+	--bg: #011018;
 	--c1: #dafdba;
 	--c2: #9aeba3;
 	--c3: #45c4b0;
 	--c4: #13678a;
-	--white: #fff;
-	--gray: #a2a2a2;
+	--c5: #053c52;
+	--c6: #012030;
 }
 
-html {
-	font-size: 16px;
-	padding: 0;
-	margin: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: var(--bg);
-	color: var(--white);
-	overflow: scroll;
+@theme {
+	--breakpoint-xs: 480px;
+
+	--color-bg2: rgb(39, 39, 51);
+	--color-bg: var(--bg);
+	--color-c1: var(--c1);
+	--color-c2: var(--c2);
+	--color-c3: var(--c3);
+	--color-c4: var(--c4);
+	--color-c5: var(--c5);
+	--color-c6: var(--c6);
+
+	--shadow-shadow: var(--shadow);
+	--shadow-big: 12px 12px 0px 0px var(--border);
+	--text-shadow-big: 12px 12px 0px var(--border);
+	--drop-shadow-big: 12px 12px 0px var(--border);
+	--drop-shadow-sm: 4px 4px 0px var(--border);
+	--drop-shadow-md: 8px 8px 0px var(--border);
 }
 
-body {
-	margin: 8px;
-	/* overflow: scroll; */
-}
-
-h1 {
-	color: var(--c1);
-}
-h2 {
-	color: var(--c2);
-}
-h3 {
-	color: var(--c3);
-}
-h4 {
-	color: var(--c4);
-}
-a {
-	color: var(--white);
-}
-a:hover {
-	color: var(--c2);
-}
-
-input,
-button {
-	font-family: inherit;
-	font-size: 16px;
-}
-
-svg *:focus {
-	outline: none;
+@layer base {
 }

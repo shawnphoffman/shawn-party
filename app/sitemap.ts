@@ -1,6 +1,8 @@
+import { MetadataRoute } from 'next'
+
 const root = 'https://shawn.party'
 
-export default function sitemap() {
+export default function sitemap(): MetadataRoute.Sitemap {
 	return [
 		{
 			url: `${root}`,

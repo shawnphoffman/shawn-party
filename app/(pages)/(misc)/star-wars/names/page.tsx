@@ -2,7 +2,7 @@
 import { memo, useCallback, useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 
-import styles from '../../Styles.module.css'
+import styles from './page.module.css'
 
 const Names = () => {
 	const query = useSearchParams()
@@ -36,25 +36,25 @@ const Names = () => {
 		return !(first && last && maiden && town)
 	}, [first, last, maiden, town])
 
-	const handleFirstChange = useCallback(e => {
+	const handleFirstChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
 		setFirst(e.target.value)
 	}, [])
 
-	const handleLastChange = useCallback(e => {
+	const handleLastChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
 		setLast(e.target.value)
 	}, [])
 
-	const handleMaidenChange = useCallback(e => {
+	const handleMaidenChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
 		setMaiden(e.target.value)
 	}, [])
 
-	const handleTownChange = useCallback(e => {
+	const handleTownChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
 		setTown(e.target.value)
 	}, [])
 
 	const handleSubmit = useCallback(async () => {
 		setLoading(true)
-		var requestOptions = {
+		const requestOptions: RequestInit = {
 			method: 'POST',
 			headers: {
 				Accept: 'application/json',

@@ -2,13 +2,32 @@
 import { memo, useCallback, useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 
-import styles from '../../Styles.module.css'
+import styles from './page.module.css'
+
+interface Episode {
+	guid: string
+	title: string
+	duration: {
+		display?: string
+	}
+}
+
+interface PodcastData {
+	title: string
+	total: {
+		count: number
+		duration: {
+			display?: string
+		}
+	}
+	episodes: Episode[]
+}
 
 const Stats = () => {
 	const searchParams = useSearchParams()
 	const query = searchParams.get('url')
 	const [url, setUrl] = useState('')
-	const [output, setOutput] = useState('')
+	const [output, setOutput] = useState<PodcastData | null>(null)
 	const [error, setError] = useState('')
 	const [loading, setLoading] = useState(false)
 
@@ -22,13 +41,13 @@ const Stats = () => {
 		return !url
 	}, [url])
 
-	const handleUrlChange = useCallback(e => {
+	const handleUrlChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
 		setUrl(e.target.value)
 	}, [])
 
 	const handleSubmit = useCallback(async () => {
 		setLoading(true)
-		setOutput('')
+		setOutput(null)
 		setError('')
 
 		try {

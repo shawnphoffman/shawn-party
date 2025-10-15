@@ -3,15 +3,20 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@vercel/analytics": "^1.2.2",
+		"@awesome.me/kit-d7ccc5bb1a": "^1.0.87",
+		"@fortawesome/fontawesome-svg-core": "^7.1.0",
+		"@fortawesome/react-fontawesome": "^3.1.0",
+		"@vercel/analytics": "^1.5.0",
 		"@vx/pattern": "^0.0.199",
+		"clsx": "^2.1.1",
 		"geo-albers-usa-territories": "^0.1.0",
-		"next": "^13.5.6",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
+		"next": "^15.5.5",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0",
 		"react-simple-maps": "^3.0.0",
-		"react-tooltip": "^5.21.6",
-		"typescript": "^5.2.2"
+		"react-tooltip": "^5.30.0",
+		"sharp": "^0.34.4",
+		"typescript": "^5.9.3"
 	},
 	"scripts": {
 		"dev": "next dev",
@@ -32,8 +37,17 @@
 		]
 	},
 	"devDependencies": {
-		"eslint": "^8.52.0",
-		"eslint-config-next": "^13.5.6",
-		"eslint-plugin-simple-import-sort": "^10.0.0"
+		"@tailwindcss/postcss": "^4.1.14",
+		"@types/node": "^24.7.2",
+		"@types/react": "^19.2.2",
+		"@types/react-dom": "^19.2.2",
+		"@types/react-simple-maps": "^3.0.6",
+		"@types/react-tooltip": "^4.2.4",
+		"eslint": "^9.37.0",
+		"eslint-config-next": "^15.5.5",
+		"eslint-plugin-react-you-might-not-need-an-effect": "^0.5.6",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
+		"postcss": "^8.5.6",
+		"tailwindcss": "^4.1.14"
 	}
 }

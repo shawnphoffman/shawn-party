@@ -1,8 +1,12 @@
 import { memo } from 'react'
 
+interface ComicsData {
+	files: string[]
+}
+
 const dataUrl = 'https://api.shawn.party/api/syno/comics'
 
-const requestOptions = {
+const requestOptions: RequestInit = {
 	method: 'POST',
 	next: { revalidate: 60 * 60 * 24 * 3 },
 	body: JSON.stringify({
@@ -14,7 +18,7 @@ const requestOptions = {
 	},
 }
 
-async function getData() {
+async function getData(): Promise<ComicsData | null> {
 	try {
 		const res = await fetch(dataUrl, requestOptions)
 		const data = await res.json()
@@ -27,7 +31,7 @@ async function getData() {
 			files,
 		}
 	} catch {
-		return {}
+		return null
 	}
 }
 
@@ -41,7 +45,7 @@ const Comics = async () => {
 			<h1>Star Wars Comics</h1>
 			{hasFiles ? (
 				<ul>
-					{data.files.map(file => (
+					{data!.files.map(file => (
 						<li key={file}>{file}</li>
 					))}
 				</ul>

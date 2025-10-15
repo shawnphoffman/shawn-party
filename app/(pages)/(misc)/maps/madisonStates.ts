@@ -1,4 +1,4 @@
-const madisonStates = [
+const madisonStates: string[] = [
 	'Alabama',
 	// 'Alaska',
 	'Arizona',

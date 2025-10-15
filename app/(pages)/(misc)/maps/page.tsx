@@ -13,15 +13,54 @@ import styles from './Map.module.css'
 import visitedParks from './nationalParks'
 import shawnStates from './shawnStates'
 
+interface GeographyData {
+	rsmKey: string
+	properties: {
+		name: string
+	}
+	geometry: {
+		coordinates: [number, number]
+	}
+}
+
+interface HomeData {
+	properties: {
+		name: string
+	}
+	geometry: {
+		coordinates: [number, number]
+	}
+}
+
+interface NationalParkData {
+	rsmKey: string
+	properties: {
+		Name: string
+		Type?: string
+	}
+	geometry: {
+		coordinates: [number, number]
+	}
+}
+
+interface LegendBallProps {
+	color: string
+	text: string
+}
+
+interface NpsBadgeProps {
+	visited?: boolean
+}
+
 const colors = {
-	unvisited: 'var(--gray)',
+	unvisited: 'var(--color-zinc-700)',
 	both: "url('#lines')",
 	shawn: 'var(--c2)',
 	madison: 'var(--c4)',
 	blank: 'var(--c1)',
 	nps: {
 		visited: 'var(--c3)',
-		unvisited: 'var(--gray)',
+		unvisited: 'var(--color-zinc-700)',
 	},
 }
 
@@ -31,7 +70,7 @@ const customProjection = geoAlbersUsaTerritories()
 	.scale(1000)
 	.translate([width / 2, height / 2])
 
-const LegendBall = ({ color, text }) => {
+const LegendBall = ({ color, text }: LegendBallProps) => {
 	return (
 		<div className={styles.legend}>
 			<span className={styles.legendBall}>
@@ -44,7 +83,7 @@ const LegendBall = ({ color, text }) => {
 	)
 }
 
-const NpsBadge = ({ visited = false }) => {
+const NpsBadge = ({ visited = false }: NpsBadgeProps) => {
 	return (
 		<path
 			fill={visited ? colors.nps.visited : colors.nps.unvisited}
@@ -87,7 +126,7 @@ const Maps = () => {
 					<Geographies geography={usStates}>
 						{({ geographies }) => (
 							<>
-								{geographies.map(geo => {
+								{geographies.map((geo: GeographyData) => {
 									const isShawn = shawnStates.indexOf(geo.properties.name) !== -1
 									const isMadison = madisonStates.indexOf(geo.properties.name) !== -1
 									const isBoth = isMadison && isShawn
@@ -122,7 +161,7 @@ const Maps = () => {
 						<Geographies geography={homes}>
 							{({ geographies }) => (
 								<>
-									{geographies.map(geo => {
+									{geographies.map((geo: HomeData) => {
 										const name = geo.properties.name
 										const coordinates = geo.geometry.coordinates
 										return (
@@ -141,7 +180,7 @@ const Maps = () => {
 						<Geographies geography={nationalParks}>
 							{({ geographies }) => (
 								<>
-									{geographies.map(geo => {
+									{geographies.map((geo: NationalParkData) => {
 										const name = geo.properties.Name
 										const type = geo.properties.Type || ''
 										if (!name.includes('National Park') && type !== 'National Park') {
