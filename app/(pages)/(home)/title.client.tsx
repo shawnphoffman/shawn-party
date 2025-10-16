@@ -1,6 +1,6 @@
 'use client'
 
-import { animate, stagger, hover } from 'motion'
+import { animate, stagger } from 'motion'
 import { splitText } from 'motion-plus'
 import { motion } from 'motion/react'
 import { useEffect, useRef } from 'react'
@@ -16,9 +16,6 @@ function TitleClient() {
 			const { chars: last } = splitText(refName.current.querySelector('#last') as Element)
 
 			refName.current.classList.remove('invisible')
-
-			console.log(first)
-			console.log(last)
 
 			// SHAWN
 			animate(

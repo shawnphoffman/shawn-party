@@ -1,6 +1,12 @@
-function ShawnHead() {
+'use client'
+
+import { motion } from 'motion/react'
+
+function ShawnHeadClient() {
 	return (
-		<svg
+		<motion.svg
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 430.2719009095 697.9023808383"
 			className="min-w-0 object-scale-down max-h-48 w-fit"
@@ -456,8 +462,8 @@ function ShawnHead() {
 				style={{ fill: '#d1d1d1' }}
 			/>
 			<path d="M200.9244335838,529.1591880983c.1088545899.1178647348.217672553.2356562163.3265271429.3535209511-.2319203443.013625134-.4638040618.0271770147-.6960906732.041754443.113432929-.1399872643.2367184436-.2720631605.3695635303-.3952753942Z" />
-		</svg>
+		</motion.svg>
 	)
 }
 
-export default ShawnHead
+export default ShawnHeadClient
