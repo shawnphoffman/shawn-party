@@ -23,7 +23,7 @@ async function getData(): Promise<ComicsData | null> {
 		const res = await fetch(dataUrl, requestOptions)
 		const data = await res.json()
 
-		console.log('data', data)
+		// console.log('data', data)
 
 		const { files } = data
 

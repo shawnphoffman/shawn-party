@@ -1,5 +1,6 @@
 'use client'
-import { memo, useCallback, useEffect, useMemo, useState } from 'react'
+
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 import styles from './page.module.css'
@@ -23,7 +24,7 @@ interface PodcastData {
 	episodes: Episode[]
 }
 
-const Stats = () => {
+function Stats() {
 	const searchParams = useSearchParams()
 	const query = searchParams.get('url')
 	const [url, setUrl] = useState('')
@@ -62,18 +63,22 @@ const Stats = () => {
 		}
 	}, [url])
 
-	useEffect(() => {
-		console.log('Output', output)
-	}, [output])
+	// useEffect(() => {
+	// 	console.log('Output', output)
+	// }, [output])
 
 	return (
 		<>
-			<h1>Podcast Stats</h1>
+			<h1 className="text-3xl font-bold">Podcast Stats</h1>
 			<hr className={styles.horizontalRule} />
-			<h3>Feed URL</h3>
+			<h3 className="text-lg font-bold">Feed URL</h3>
 			<input className={styles.nativeControl} type="text" onChange={handleUrlChange} value={url} />
 			<br />
-			<button disabled={buttonDisabled} onClick={handleSubmit}>
+			<button
+				className="border py-2 px-4 rounded-md bg-zinc-900 text-white hover:bg-zinc-800 transition-all duration-300"
+				disabled={buttonDisabled}
+				onClick={handleSubmit}
+			>
 				Fetch Stats
 			</button>
 			{loading && (
@@ -107,4 +112,4 @@ const Stats = () => {
 	)
 }
 
-export default memo(Stats)
+export default Stats
