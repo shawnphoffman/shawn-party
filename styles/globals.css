@@ -30,6 +30,7 @@
 	--shadow-shadow: var(--shadow);
 	--shadow-big: 12px 12px 0px 0px var(--border);
 	--text-shadow-big: 12px 12px 0px var(--border);
+	--text-shadow-md: 4px 4px 0px var(--border);
 	--drop-shadow-big: 12px 12px 0px var(--border);
 	--drop-shadow-sm: 4px 4px 0px var(--border);
 	--drop-shadow-md: 8px 8px 0px var(--border);

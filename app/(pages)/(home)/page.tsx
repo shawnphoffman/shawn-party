@@ -4,6 +4,9 @@ import head from './head.png'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBluesky, faDiscord, faGithub, faInstagram, faLinkedin } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/brands'
+import Title from './title'
+import { Suspense } from 'react'
+import TitleClient from './title.client'
 
 const linkClasses = 'drop-shadow-sm hover:drop-shadow-md hover:scale-110 transition-all duration-300 hover:text-c1'
 const textClasses = `text-4xl ${linkClasses}`
@@ -14,17 +17,16 @@ function Home() {
 		<div className="flex flex-col gap-12">
 			<div className={'flex flex-row gap-8 w-full'}>
 				<Image
-					className="min-w-0 object-scale-down max-h-32 w-fit sm:max-h-44 md:max-h-60 hidden xs:block drop-shadow-big"
+					className="min-w-0 object-scale-down max-h-32 w-fit sm:max-h-44 md:max-h-60 hidden xs:block drop-shadow-big active:drop-shadow-none transition-all active:translate-y-3 active:translate-x-3 active:rotate-10"
 					width={158}
 					src={head}
 					alt="Illustration of my goofy face"
 				/>
-				<h1 className="font-black tracking-tight text-6xl xs:text-7xl sm:text-8xl md:text-9xl w-full text-shadow-big md:max-w-2xl">
-					<div className="text-left">Shawn</div>
-					<div className="text-right">Hoffman</div>
-				</h1>
+				<Suspense fallback={<Title />}>
+					<TitleClient />
+				</Suspense>
 			</div>
-			<div className="text-xl text-center">I removed the witty tagline in favor of simplicity.</div>
+			<div className="text-xl text-center text-shadow-md">I removed the witty tagline in favor of simplicity.</div>
 			<div className="flex flex-row flex-wrap justify-center gap-x-8 gap-y-4">
 				<Link className={iconClasses} href="https://bsky.app/profile/shawn.justshillin.com" target="_blank" title="Bluekky">
 					<FontAwesomeIcon icon={faBluesky} />
@@ -44,10 +46,10 @@ function Home() {
 			</div>
 			<div className="flex flex-col sm:flex-row gap-12 justify-center items-center">
 				<Link className={textClasses} target="_blank" href="https://blog.shawn.party/">
-					Blog
+					&gt;Blog
 				</Link>
 				<Link className={textClasses} target="_blank" href="https://shawnhoffman.dev/">
-					Résumé
+					&gt;Resume
 				</Link>
 				{/* https://cake.avris.it/rC0 */}
 				{/* https://en.pronouns.page/@shawn.party */}

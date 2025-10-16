@@ -10,6 +10,8 @@
 		"@vx/pattern": "^0.0.199",
 		"clsx": "^2.1.1",
 		"geo-albers-usa-territories": "^0.1.0",
+		"motion": "^12.23.24",
+		"motion-plus": "https://api.motion.dev/registry?package=motion-plus&version=1.5.4&token=7932cd18895809371163503b7cc738165b4c546d6123654c0aaf4eb9a188b328",
 		"next": "^15.5.5",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
