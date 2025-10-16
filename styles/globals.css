@@ -38,3 +38,37 @@
 
 @layer base {
 }
+
+svg#shawn-head {
+	.lens {
+		@apply transition-colors;
+		fill: var(--c2);
+	}
+	.highlight {
+		@apply transition-colors;
+		fill: var(--c3);
+	}
+	.streaks {
+		@apply transition-colors;
+		fill: #5c5c5c;
+	}
+}
+svg#shawn-head:hover {
+	.lens {
+		fill: var(--c3);
+	}
+	.highlight {
+		fill: var(--c1);
+	}
+}
+svg#shawn-head:active {
+	.lens {
+		fill: var(--color-red-500);
+	}
+	.highlight {
+		fill: var(--color-orange-600);
+	}
+	.streaks {
+		fill: var(--color-rose-600);
+	}
+}
