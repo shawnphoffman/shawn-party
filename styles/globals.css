@@ -16,7 +16,7 @@
 }
 
 @theme {
-	--breakpoint-xs: 480px;
+	--breakpoint-xs: 380px;
 
 	--color-bg2: rgb(39, 39, 51);
 	--color-bg: var(--bg);

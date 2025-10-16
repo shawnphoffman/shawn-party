@@ -88,7 +88,7 @@ function TitleClient() {
 	}, [])
 	return (
 		<h1
-			className="font-black text-c1 tracking-tight text-6xl xs:text-7xl sm:text-8xl md:text-9xl w-full text-shadow-big md:max-w-2xl invisible flex flex-col"
+			className="font-black text-c1 tracking-tight text-5xl xs:text-6xl sm:text-8xl md:text-9xl w-full text-shadow-big md:max-w-2xl invisible flex flex-col"
 			ref={refName}
 		>
 			<motion.div id="first" className="w-fit self-start">

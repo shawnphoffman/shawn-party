@@ -13,8 +13,8 @@ const iconClasses = `text-5xl ${linkClasses}`
 function Home() {
 	return (
 		<div className="flex flex-col gap-12">
-			<div className={'flex flex-row gap-8 w-full'}>
-				<div className="min-w-24 w-fit sm:max-h-44 md:max-h-60 hidden drop-shadow-big active:drop-shadow-none transition-all active:translate-y-3 active:translate-x-3 active:rotate-10 [&>svg]:w-full xs:flex items-center justify-center overflow-visible">
+			<div className={'flex flex-row sm:gap-8 gap-4 w-full -mx-2 sm:mx-0'}>
+				<div className="sm:min-w-24 min-w-12 max-w-16 sm:max-w-32 w-fit sm:max-h-44 md:max-h-60 hidden drop-shadow-big active:drop-shadow-none transition-all active:translate-y-3 active:translate-x-3 active:rotate-10 [&>svg]:w-full xs:flex items-center justify-center overflow-visible">
 					<Suspense fallback={<div></div>}>
 						<ShawnHead />
 					</Suspense>
